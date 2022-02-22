@@ -69,7 +69,7 @@ function Body() {
       <div className="social-menu">
         <ul>
           <li key={"git"}><a href="https://github.com/CihatKOCAK" target="blank"><i className="fab fa-github"></i></a></li>
-          <li key={"insta"}><a href="https://www.instagram.com/cihatkocakk/" target="blank"><i className="fab fa-instagram"></i></a></li>
+          <li key={"hackerrank"}><a href="https://www.hackerrank.com/pcihatkocakk" target="blank"><i className="fab fa-hackerrank"></i></a></li>
           <li key={"linkedn"}><a href="https://www.linkedin.com/in/cihat-kocakk/" target="blank"><i className="fab fa-linkedin-in"></i></a></li>
           <li key={"tw"}><a href="https://twitter.com/davsanavi"><i className="fab fa-twitter" target="blank"></i></a></li>
         </ul>
