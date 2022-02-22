@@ -1,0 +1,22 @@
+@import "../../../global.scss";
+
+.container-projects {
+  height: calc(100vh - 20vh);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+[theme="dark"] {
+ .container{
+  background-color: $backGroundD;
+ }
+}
+
+[theme="white"] {
+  .container{
+    background-color: $backGroundW;
+   }
+}

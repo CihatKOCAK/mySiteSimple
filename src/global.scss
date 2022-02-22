@@ -1,0 +1,90 @@
+
+//dark Theme Colors
+
+$backGroundD: #3c3744;
+$mainColorD: #fbfff1;
+$accentD: #c41e3d;
+
+$backGroundW: #fbfff1;
+$mainColorW: #3c3744; //text
+$accentW: #f49d6e;
+
+//happy face colors
+$happyFaceColor: #008243;
+$happySeriousColorHover: #b40061;
+
+//code side colors
+$codeContainerD: rgb(128, 128, 128);
+$codeBackgroundD: #21262d;
+$codevariablesD: #58a6ff;
+$codeVariablesTypeD: #da3633;
+$codeKeyD: #79c0ff;
+$codeObjectD: #ffa657;
+$codeCommentD: #707070;
+
+$codeContainerW: rgb(111, 90, 202);
+$codeBackgroundW: #f6f8fa;
+$codevariablesW: #0075fc;
+$codeVariablesTypeW: rgb(0, 36, 240);
+$codeKeyW: #14f000;
+$codeObjectW: #352212;
+$codeCommentW: #b4afaf;
+
+//social media colors
+
+$socialMediaColorD: #3c3744;
+$socialMediaBackgroundD: #fbfff1;
+$socialMediaColorHoverD: rgb(204, 62, 62);
+$socialMediaBoxShadowD: rgba(156, 83, 83, 0.5);
+$socialMediaBoxShadowHoverD: rgba(8, 8, 8, 0.5);
+
+$socialMediaColorW: #d7cbeb;
+$socialMediaBackgroundW: #242522;
+$socialMediaColorHoverW: rgb(63, 49, 49);
+$socialMediaBoxShadowW: rgba(75, 39, 39, 0.5);
+$socialMediaBoxShadowHoverW: rgba(255, 0, 0, 0.5);
+
+//projects card colors
+
+$cardBackGroundD: #28282b;
+$cardTextColorD: #cccccc;
+
+$cardBackGroundW: #b4afaf;
+$cardTextColorW: #242323;
+
+//contact me colors
+
+$blueD: #313A3D;
+$orangeD: #b16d2d;
+$greyD: #b6b6b6;
+$background-contactD: #efefef;
+$field-colorD: #e8e9ea;
+$section-bgD: #f6f8fa;
+
+$blueW: #313a3d;
+$orangeW: #291808;
+$greyW: #b6b6b6;
+$background-contactW: #c2b2b2;
+$field-colorW: #e8e9ea;
+$section-bgW:#73737e;
+
+//effects colors
+$snowColorD: #ffffff;
+$snowColorW: #9a78e9;
+
+
+$widthTablet: 768px;
+
+
+$widthMobile: 390px;
+
+@mixin tablet {
+  @media (max-width: #{$widthTablet}) and (min-width: #{$widthMobile+1}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$widthMobile}) {
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../global.scss";
+.container-404 {
+	height: 100vh;
+	font-family: "Montserrat", "sans-serif";
+	font-weight: bolder;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+
+.app[theme="dark"] {
+    a { color: $mainColorD;}
+}
+.app[theme="white"] {
+    a { color: $mainColorW;}
+}

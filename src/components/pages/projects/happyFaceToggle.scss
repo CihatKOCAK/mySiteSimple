@@ -1,0 +1,156 @@
+@import "../../../global.scss";
+
+.switchpos {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+.switch {
+  position: relative;
+  width: 110px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 10px;
+  input {
+    display: none;
+    display: none;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $happySeriousColorHover;
+  transition: 0.4s;
+  border-radius: 80px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.4);
+  &:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    transition: 0.5s;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+input {
+  &:checked {
+    + {
+      .slider {
+        background-color: $happyFaceColor;
+        background-color: $happyFaceColor;
+        &:before {
+          transform: translateX(70px);
+          transform: translateX(70px);
+        }
+      }
+    }
+  }
+}
+.eyes {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  height: 7px;
+  width: 7px;
+  border-radius: 45px;
+  background: $happyFaceColor;
+  display: none;
+  position: absolute;
+}
+.eyes2 {
+  position: absolute;
+  right: 23px;
+  top: 13px;
+  height: 7px;
+  width: 7px;
+  border-radius: 45px;
+  background: $happyFaceColor;
+  display: none;
+}
+.halfCircle {
+  cursor: pointer;
+  transition: 2s;
+  position: absolute;
+  top: 23px;
+  right: 16px;
+  height: 5px;
+  width: 10px;
+  border-radius: 0 0 90px 90px;
+  background: $happyFaceColor;
+  display: none;
+}
+.eyesAfter {
+  position: absolute;
+  right: 82px;
+  top: 12px;
+  height: 7px;
+  width: 7px;
+  border-radius: 45px;
+  background: $happySeriousColorHover;
+  position: absolute;
+}
+.eyes2After {
+  position: absolute;
+  right: 93px;
+  top: 12px;
+  height: 7px;
+  width: 7px;
+  border-radius: 45px;
+  background: $happySeriousColorHover;
+  position: absolute;
+}
+.aftermouth {
+  position: absolute;
+  top: 23px;
+  right: 84px;
+  height: 5px;
+  width: 12px;
+  border-radius: 90px / 45px;
+  background: $happySeriousColorHover;
+  position: absolute;
+}
+.greenMode {
+  background: $happyFaceColor;
+  background: $happyFaceColor;
+  .polyStyle {
+    fill: transparent;
+    stroke: $happyFaceColor;
+    stroke-width: 5;
+    fill: transparent;
+    stroke: $happyFaceColor;
+    stroke-width: 5;
+  }
+  .eyes {
+    display: inline;
+    display: inline;
+  }
+  .eyes2 {
+    display: inline;
+    display: inline;
+  }
+  .halfCircle {
+    display: inline;
+    display: inline;
+  }
+  .eyesAfter {
+    display: none;
+    display: none;
+  }
+  .eyes2After {
+    display: none;
+    display: none;
+  }
+  .aftermouth {
+    display: none;
+    display: none;
+  }
+}

@@ -1,0 +1,512 @@
+@import "../../../../global.scss";
+
+.app[theme="dark"] {
+  .code-container {
+    background: $backGroundD;
+    overflow: auto;
+    width: 80%;
+    margin: auto;
+    border: solid $codeContainerD;
+    border-width: 0.1em 0.1em 0.1em 0.8em;
+    padding: 0.2em 0.6em;
+    @include mobile {
+      width: 95%;
+    }
+    @include tablet {
+      width: 90%;
+    }
+    .code-pre,
+    .code,
+    .tool,
+    .codeKey,
+    .varType,
+    .varStr,
+    .codeComment,
+    a {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .code-pre {
+      font-size: 1.5em;
+      margin: 0;
+      line-height: 150%;
+      @include mobile {
+        font-size: 1.0em;
+      }
+      @include tablet {
+        font-size: 1.3em;
+      }
+      padding-bottom: 5px;
+      color: $mainColorD;
+      background-color: $codeBackgroundD;
+
+      .codeComment {
+        color: $codeCommentD;
+      }
+      .code,
+      .tool {
+        color: $codeObjectD;
+      }
+      .codeKey {
+        color: $codevariablesD;
+      }
+      .varType {
+        color: $codeVariablesTypeD;
+      }
+      .varStr {
+        color: $codeKeyD;
+      }
+      .code-botSide {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          display: block;
+        }
+        @include tablet {
+          display: block;
+        }
+        #projects {
+          margin-top: 10px;
+          overflow: hidden;
+          display: block;
+          margin-top: -35px;
+          position: relative;
+          color: $accentD;
+          text-decoration: none;
+          @include mobile {
+            display: block;
+          }
+          @include tablet {
+            display: block;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1em;
+            background-color: $accentD;
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+          }
+          &:focus::after {
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
+          }
+          &::after {
+            opacity: 1;
+            transform: translate3d(-100%, 0, 0);
+          }
+          &:hover::after,
+          &:focus::after {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+
+      #contact {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        color: $accentD;
+        text-decoration: none;
+        margin-bottom: 10px;
+        width: 16%;
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: $accentD;
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+        &:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+        &::after {
+          opacity: 1;
+          transform: translate3d(-100%, 0, 0);
+        }
+        &:hover::after,
+        &:focus::after {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .forMore {
+        display: flex;
+        justify-content: end;
+        text-align: right;
+        @include mobile {
+          justify-content: start;
+          margin-bottom: 0px;
+        }
+        @include tablet {
+          justify-content: start;
+          margin-bottom: 0px;
+        }
+        margin-right: 40px;
+        margin-bottom: 20px;
+        a {
+          color: $codeCommentD;
+          animation: bigger 2s linear infinite;
+          @include mobile {
+            animation: none;
+            padding: 10px 20px;
+          }
+          @include tablet {
+            animation: none;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bigger {
+    0% {
+      font-size: 0.8em;
+      box-shadow: 0 none 0 0 rgba($codeCommentD, 0.3),
+        0 0 0 0.2em rgba($codeCommentD, 0.3);
+    }
+    100% {
+      font-size: 1em;
+      box-shadow: 0 0 0 0.1em rgba($codeCommentD, 0.3),
+        0 0 0 0.5em rgba($codeCommentD, 0.3);
+    }
+  }
+
+  .context-side {
+    font-family: "Supermercado One", cursive;
+    text-align: center;
+    font-size: 1.5em;
+    @include mobile {
+      font-size: 1.3em;
+    }
+    @include tablet {
+      font-size: 1.3em;
+    }
+    .typical {
+      margin-left: 10px;
+      height: 30px;
+    }
+    margin-bottom: 20px;
+  }
+
+  .social-menu {
+    margin: 40px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        margin: 0 15px;
+        .fab {
+          font-size: 40px;
+          line-height: 80px;
+          transition: 0.3s;
+          @include mobile {
+            font-size: 35px;
+            line-height: 60px;
+          }
+          @include tablet {
+            font-size: 35px;
+            line-height: 60px;
+          }
+          color: $socialMediaColorD;
+          &:hover {
+            color: $socialMediaColorHoverD;
+          }
+        }
+        a {
+          @include mobile {
+            width: 60px;
+            height: 60px;
+          }
+          @include tablet {
+            width: 60px;
+            height: 60px;
+          }
+          position: relative;
+          display: block;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: $socialMediaBackgroundD;
+          text-align: center;
+          transition: 0.6s;
+          box-shadow: 0 5px 4px $socialMediaBoxShadowD;
+          &:hover {
+            transform: translate(0, -10%);
+            background-color: $socialMediaBoxShadowHoverD;
+          }
+        }
+      }
+    }
+  }
+}
+.app[theme="white"] {
+  .code-container {
+    background: $backGroundW;
+    overflow: auto;
+    width: 80%;
+    margin: auto;
+    border: solid $codeContainerW;
+    border-width: 0.1em 0.1em 0.1em 0.8em;
+    padding: 0.2em 0.6em;
+    @include mobile {
+      width: 95%;
+    }
+    @include tablet {
+      width: 90%;
+    }
+    .code-pre,
+    .code,
+    .tool,
+    .codeKey,
+    .varType,
+    .varStr,
+    .codeComment,
+    a {
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .code-pre {
+      font-size: 1.5em;
+      margin: 0;
+      line-height: 150%;
+      @include mobile {
+        font-size: 1.0em;
+      }
+      @include tablet {
+        font-size: 1.3em;
+      }
+      padding-bottom: 5px;
+      color: $mainColorW;
+      background-color: $codeBackgroundW;
+
+      .codeComment {
+        color: $codeCommentW;
+      }
+      .code,
+      .tool {
+        color: $codeObjectW;
+      }
+      .codeKey {
+        color: $codevariablesW;
+      }
+      .varType {
+        color: $codeVariablesTypeW;
+      }
+      .varStr {
+        color: $codeKeyW;
+      }
+      .code-botSide {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          display: block;
+        }
+        @include tablet {
+          display: block;
+        }
+        #projects {
+          margin-top: 10px;
+          overflow: hidden;
+          display: block;
+          margin-top: -35px;
+          position: relative;
+          color: $accentW;
+          text-decoration: none;
+          @include mobile {
+            display: block;
+          }
+          @include tablet {
+            display: block;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1em;
+            background-color: $accentW;
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+          }
+          &:focus::after {
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
+          }
+          &::after {
+            opacity: 1;
+            transform: translate3d(-100%, 0, 0);
+          }
+          &:hover::after,
+          &:focus::after {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+
+      #contact {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        color: $accentW;
+        text-decoration: none;
+        margin-bottom: 10px;
+        width: 16%;
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: $accentW;
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+        &:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
+        &::after {
+          opacity: 1;
+          transform: translate3d(-100%, 0, 0);
+        }
+        &:hover::after,
+        &:focus::after {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .forMore {
+        display: flex;
+        justify-content: end;
+        text-align: right;
+        @include mobile {
+          justify-content: start;
+          margin-bottom: 0px;
+        }
+        @include tablet {
+          justify-content: start;
+          margin-bottom: 0px;
+        }
+        margin-right: 40px;
+        margin-bottom: 20px;
+        a {
+          color: $codeCommentW;
+          animation: bigger 2s linear infinite;
+          @include mobile {
+            animation: none;
+            padding: 10px 20px;
+          }
+          @include tablet {
+            animation: none;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes bigger {
+    0% {
+      font-size: 0.8em;
+      box-shadow: 0 none 0 0 rgba($codeCommentW, 0.3),
+        0 0 0 0.2em rgba($codeCommentW, 0.3);
+    }
+    100% {
+      font-size: 1em;
+      box-shadow: 0 0 0 0.1em rgba($codeCommentW, 0.3),
+        0 0 0 0.5em rgba($codeCommentW, 0.3);
+    }
+  }
+
+  .context-side {
+    font-family: "Supermercado One", cursive;
+    text-align: center;
+    font-size: 1.5em;
+    .typical {
+      margin-left: 10px;
+      height: 30px;
+    }
+    margin-bottom: 20px;
+  }
+
+  .social-menu {
+    margin: 40px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        margin: 0 15px;
+        .fab {
+          font-size: 40px;
+          line-height: 80px;
+          transition: 0.3s;
+          @include mobile {
+            font-size: 35px;
+            line-height: 60px;
+          }
+          @include tablet {
+            font-size: 35px;
+            line-height: 60px;
+          }
+          color: $socialMediaColorW;
+          &:hover {
+            color: $socialMediaColorHoverW;
+          }
+        }
+        a {
+          @include mobile {
+            width: 60px;
+            height: 60px;
+          }
+          @include tablet {
+            width: 60px;
+            height: 60px;
+          }
+          position: relative;
+          display: block;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: $socialMediaBackgroundW;
+          text-align: center;
+          transition: 0.6s;
+          box-shadow: 0 5px 4px $socialMediaBoxShadowW;
+          &:hover {
+            transform: translate(0, -10%);
+            background-color: $socialMediaBoxShadowHoverW;
+          }
+        }
+      }
+    }
+  }
+}

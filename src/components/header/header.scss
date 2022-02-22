@@ -1,0 +1,233 @@
+@import "../../global.scss";
+
+[theme="white"] {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5%;
+
+    i{
+      fontSize: "25px";
+      @include mobile {
+        fontSize: "18px";
+      }
+      @include tablet {
+        fontSize: "22px";
+      }
+    }
+
+    button {
+      @include mobile {
+        height: 200px;
+        width: 20px;
+      }
+      @include tablet {
+        height: 300px;
+        width: 30px;
+      }
+      height: 400px;
+      width: 40px;
+      display: block;
+      border: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+    button:focus,
+    button:active {
+      outline: none;
+    }
+
+    button:active {
+      transform: scale(1);
+    }
+
+    article {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-right: 10px;
+    }
+
+    /* Toggle button styles */
+    .toggle {
+      background-color: $mainColorW;
+      width: 40px;
+      height: 20px;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      position: relative;
+      border: 2px solid;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color ease-out 250ms;
+    }
+
+    .toggle::after {
+      content: "";
+      position: absolute;
+      background-color: $backGroundW;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 30px;
+      transition: transform ease-out 250ms;
+    }
+
+    /* Active (dark mode) class for animating transition on toggle button*/
+    .toggle.clicked::after {
+      transform: translateX(100%);
+    }
+
+    /* "Sun to moon" graphics and animation */
+    .circle,
+    .circle::after {
+      background-color: $accentW;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      @include mobile {
+       width: 75px;
+       height: 75px;
+      }
+
+    }
+
+    .circle {
+      transform: rotate(-25deg);
+      transition: background-color ease-out 250ms;
+    }
+
+    .circle::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      background-color: $backGroundW;
+      transition: transform ease-out 250ms;
+      transition-delay: 20ms;
+    }
+
+    .circle.clicked::after {
+      transform: translateY(-30%);
+    }
+  }
+}
+[theme="dark"] {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 5%;
+
+    button {
+      @include mobile {
+        height: 200px;
+        width: 20px;
+      }
+      @include tablet {
+        height: 300px;
+        width: 30px;
+      }
+      height: 400px;
+      width: 40px;
+      display: block;
+      border: none;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+    button:focus,
+    button:active {
+      outline: none;
+    }
+
+    button:active {
+      transform: scale(1);
+    }
+
+    article {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-right: 10px;
+    }
+
+    /* Toggle button styles */
+    .toggle {
+      background-color: $mainColorD;
+      width: 40px;
+      height: 20px;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      position: relative;
+      border: 2px solid;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color ease-out 250ms;
+    }
+
+    .toggle::after {
+      content: "";
+      position: absolute;
+      background-color: $backGroundD;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 30px;
+      transition: transform ease-out 250ms;
+    }
+
+    /* Active (dark mode) class for animating transition on toggle button*/
+    .toggle.clicked::after {
+      transform: translateX(100%);
+    }
+
+    /* "Sun to moon" graphics and animation */
+    .circle,
+    .circle::after {
+      background-color: $accentD;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      @include mobile {
+        width: 75px;
+        height: 75px;
+       }
+    }
+
+    .circle {
+      transform: rotate(-25deg);
+      transition: background-color ease-out 250ms;
+    }
+
+    .circle::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      background-color: $backGroundD;
+      transition: transform ease-out 250ms;
+      transition-delay: 20ms;
+    }
+
+    .circle.clicked::after {
+      transform: translateY(-30%);
+    }
+  }
+}

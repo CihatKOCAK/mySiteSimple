@@ -1,0 +1,19 @@
+@import "./global.scss";
+
+.app {
+  height: 100vh;
+}
+.app[theme="dark"] {
+  display: block;
+  background-color: $backGroundD;
+  color: $mainColorD;
+  transition: color ease-out 250ms;
+  overflow-x: hidden;
+}
+.app[theme="white"] {
+  display: block;
+  background-color: $backGroundW;
+  color: $mainColorW;
+  transition: color ease-out 250ms;
+  overflow-x: hidden;
+}
