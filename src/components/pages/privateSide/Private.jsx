@@ -4,7 +4,7 @@ import "./private.scss";
 export default function Private() {
     return (
         <div>
-            {window.screen.width > 799 && <div className='body-pr'>
+            {window.screen.width > 799 ? <div className='body-pr'>
                 <div class="container-pr">
                     <i class="fa-solid fas fa-heart"></i>
                     <div class="bread">
@@ -20,7 +20,7 @@ export default function Private() {
                     </div>
                     <h3 className='my-h3'>I loaf you berry much! ❤️</h3>
                 </div>
-            </div>}
+            </div> : ""}
             <div className='papatya'>
                 <div class="flower-container">
                     <div class="flower-leaf"></div>
@@ -44,7 +44,7 @@ export default function Private() {
                         <div class="flower-petal"></div>
                         <div class="flower-center"></div>
                     </div>
-                    <div class="flower-text" style={{color:"black", fontSize:"25px"}}>I have a very beautiful daisy in my private space, my daisy ❤️</div>
+                    <div class="flower-text" style={{ color: "black", fontSize: "25px" }}>I have a very beautiful daisy in my private space, my daisy ❤️</div>
                 </div></div>
         </div>
     )
