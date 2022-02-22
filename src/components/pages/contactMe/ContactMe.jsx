@@ -19,7 +19,7 @@ export default function ContactMe({ theme, setTheme }) {
             message = messageState.message;
             name = nameState.name;
             mail = mailState.mail;
-            let toSend ={
+            let toSend = {
                 name: "Cihat",
                 form_name: "cihatkocak.com - contact me",
                 from_name: name,
@@ -28,7 +28,7 @@ export default function ContactMe({ theme, setTheme }) {
                 reply_to: mail,
             }
 
-            emailjs.send(process.env.REACT_APP_MAIL_ACCESS_TOKEN , process.env.REACT_APP_TEMPLATE_ID, toSend, process.env.REACT_APP_MAIL_USER_ID)
+            emailjs.send(process.env.REACT_APP_MAIL_ACCESS_TOKEN, process.env.REACT_APP_TEMPLATE_ID, toSend, process.env.REACT_APP_MAIL_USER_ID)
                 .then((result) => {
                     console.log(result.text);
                     setMessageSended(true);
@@ -42,6 +42,7 @@ export default function ContactMe({ theme, setTheme }) {
                 });
         }
     }
+    console.log(process.env.REACT_APP_MAIL_ACCESS_TOKEN)
     return (
         <>
             <Header theme={theme} setTheme={setTheme} />
