@@ -51,7 +51,7 @@ function Body() {
           <div>&emsp;&emsp;<span className="codeKey">tools</span>: [{toolsList}],</div>
           <div>&emsp;&emsp;<span className="codeKey">techCommunities</span>: &#123;</div>
           <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">coorganizer</span>: <span className='varStr'>&quot;kodluyoruz&quot;</span>,</div>
-          <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">mentor</span>: <span className='varStr'>&quot;patika d<Link className="codeKey" style={{cursor:"text"}} to="/my-private-space">e</Link>v&quot;</span></div>
+          <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">mentor</span>: <span className='varStr'>&quot;patika d<Link className="varStr" style={{cursor:"text"}} to="/my-private-space">e</Link>v&quot;</span></div>
           <div>&emsp;&emsp;&emsp;&#125;,</div>
           <div>&emsp;&emsp;<span className="codeKey">challenge</span>: <span className='varStr'>&quot;not for now&quot;</span></div>
           <div>&#125;</div>
