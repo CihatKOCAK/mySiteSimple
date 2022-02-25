@@ -61,7 +61,7 @@ function Body() {
 
             </div>
             <div className="forMore">
-              <a href="/cv.pdf" download target="_blank">//For More!</a></div>
+              <a href="/cv.pdf" download target="_blank">//For Resume!</a></div>
           </div>
           <Link id='contact' to="/contact-me" replace >{' > '}contactMe 📮</Link>
         </pre>
