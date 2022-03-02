@@ -32,7 +32,7 @@ function Body() {
       )
     }, (porps, preProps) => true
   )
-  console.log(window.screen.width);
+  //console.log(window.screen.width);
   return (
     <>
       <div className='context-side'>
@@ -51,7 +51,7 @@ function Body() {
           <div>&emsp;&emsp;<span className="codeKey">tools</span>: [{toolsList}],</div>
           <div>&emsp;&emsp;<span className="codeKey">techCommunities</span>: &#123;</div>
           <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">coorganizer</span>: <span className='varStr'>&quot;kodluyoruz&quot;</span>,</div>
-          <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">mentor</span>: <span className='varStr'>&quot;patika d<Link className="varStr" style={{cursor:"text"}} to="/my-private-space">e</Link>v&quot;</span></div>
+          <div>&emsp;&emsp;&emsp;&emsp;<span className="codeKey">mentor</span>: <span className='varStr'>&quot;patika d<Link className="varStr" style={{ cursor: "text" }} to="/my-private-space">e</Link>v&quot;</span></div>
           <div>&emsp;&emsp;&emsp;&#125;,</div>
           <div>&emsp;&emsp;<span className="codeKey">challenge</span>: <span className='varStr'>&quot;not for now&quot;</span></div>
           <div>&#125;</div>
@@ -71,7 +71,7 @@ function Body() {
           <li key={"git"}><a href="https://github.com/CihatKOCAK" target="blank"><i className="fab fa-github"></i></a></li>
           <li key={"hackerrank"}><a href="https://www.hackerrank.com/pcihatkocakk" target="blank"><i className="fab fa-hackerrank"></i></a></li>
           <li key={"linkedn"}><a href="https://www.linkedin.com/in/cihat-kocakk/" target="blank"><i className="fab fa-linkedin-in"></i></a></li>
-          <li key={"tw"}><a href="https://twitter.com/davsanavi"><i className="fab fa-twitter" target="blank"></i></a></li>
+          <li key={"telegram"}><a href="https://t.me/pcihatkocak"><i className="fab fa-telegram" target="blank"></i></a></li>
         </ul>
       </div>
     </>

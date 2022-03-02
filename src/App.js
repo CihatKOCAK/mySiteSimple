@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.scss";
 import Index from "./components/pages/index/Index";
 import {
@@ -18,7 +18,12 @@ import Private from "./components/pages/privateSide/Private";
 
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+
+  const [theme, setTheme] = useState(localStorage.getItem("activeTheme") || "dark");
+
+  useEffect(() => {
+    localStorage.setItem("activeTheme", theme);
+  }, [theme]);
   
   const snow = () => {
     if (getChristmas() === true) {
@@ -28,6 +33,7 @@ function App() {
     }
     else return "";
   }
+
   return (
     <BrowserRouter>
       <div className="app" theme={theme} >
